@@ -33,43 +33,10 @@
 @import url("windows10/windows10.css");
 
 /* montserrat */
-@font-face {
-	font-family: "montserrat-regular";
-	src: url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), 
-	     url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "montserrat-bold";
-	src: url("../fonts/montserrat/montserrat-bold-webfont.woff2") format("woff2"), 
-	     url("../fonts/montserrat/montserrat-bold-webfont.woff") format("woff");
-	font-style: normal;
-	font-weight: normal;
-}
 
-/* libre baskerville */
-@font-face {
-	font-family: "librebaskerville-regular";
-	src: url("../fonts/librebaskerville/librebaskerville-regular-webfont.woff2") format("woff2"), 
-	     url("../fonts/librebaskerville/librebaskerville-regular-webfont.woff") format("woff");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "librebaskerville-italic";
-	src: url("../fonts/librebaskerville/librebaskerville-italic-webfont.woff2") format("woff2"), 
-	     url("../fonts/librebaskerville/librebaskerville-italic-webfont.woff") format("woff");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "librebaskerville-bold";
-	src: url("../fonts/librebaskerville/librebaskerville-bold-webfont.woff2") format("woff2"), 
-	     url("../fonts/librebaskerville/librebaskerville-bold-webfont.woff") format("woff");
-	font-style: normal;
-	font-weight: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 
 /* ===================================================================
  *  02. base style overrides - (_document-setup)
@@ -101,7 +68,7 @@ body {
 
 body {
 	background: #050505;
-	font-family: "librebaskerville-regular", serif;
+	font-family: "montserrat-bold", sans-serif;
 	font-size: 1.6rem;
 	line-height: 3rem;
 	color: #353535;
@@ -109,6 +76,7 @@ body {
 	padding: 0;
 }
 
+span.all-span{color: #0094fe;}
 /* ------------------------------------------------------------------- 
  * links - (_document-setup) 
  * ------------------------------------------------------------------- */
@@ -773,8 +741,8 @@ input[type="button"] {
 	line-height: 5.4rem;
 	padding: 0 3rem;
 	margin: 0 .3rem 1.2rem 0;
-	background: #808080;
-	color: #222222;
+	background: #fff;
+	color: #1f1f1f;
 	text-decoration: none;
 	cursor: pointer;
 	text-align: center;
@@ -809,7 +777,7 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-	background: #151515;
+	background: #15223b;
 	color: #FFFFFF;
 }
 
@@ -1235,8 +1203,9 @@ input::-moz-focus-inner {
 }
 
 .section-intro h1 {
-	font-family: "librebaskerville-bold", serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 4.8rem;
+	font-weight: 800;
 	line-height: 1.375;
 	color: #151515;
 }
@@ -1244,7 +1213,7 @@ input::-moz-focus-inner {
 .section-intro h3 {
 	font-family: "montserrat-bold", sans-serif;
 	font-size: 2rem;
-	color: #4C2405;
+	color: #1f1f1f;
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 	margin-bottom: 0;
@@ -1398,7 +1367,7 @@ header .header-logo a {
 }
 
 #header-menu-trigger.opaque {
-	background-color: #000000;
+	background-color: #444e82;
 }
 
 #header-menu-trigger.opaque .header-menu-text {
@@ -1458,12 +1427,12 @@ header .header-logo a {
  * off-canvas menu - (_layout.scss) 
  * ------------------------------------------------------------------- */
 #menu-nav-wrap {
-	background: #111111;
-	color: rgba(255, 255, 255, 0.25);
+	    background: #0b1327;
+	color: #fff;
 	font-family: "montserrat-regular", sans-serif;
 	font-size: 1.5rem;
 	line-height: 1.6;
-	padding: 3.6rem 3rem;
+	padding: 0;
 	height: 100%;
 	width: 240px;
 	position: fixed;
@@ -1486,7 +1455,7 @@ header .header-logo a {
 
 #menu-nav-wrap a,
 #menu-nav-wrap a:visited {
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.75);
 }
 
 #menu-nav-wrap a:hover,
@@ -1523,7 +1492,9 @@ header .header-logo a {
 #menu-nav-wrap .nav-list li a {
 	color: rgba(255, 255, 255, 0.25);
 	display: block;
+	padding: 7px 25px;
 }
+#menu-nav-wrap .nav-list li a:hover{background: #000008;}
 
 #menu-nav-wrap .nav-list li a:hover,
 #menu-nav-wrap .nav-list li a:focus {
@@ -1535,6 +1506,7 @@ header .header-logo a {
 	display: inline-block;
 	margin: 0;
 	font-size: 2.1rem;
+	padding: 0 25px;
 }
 
 #menu-nav-wrap .header-social-list li {
@@ -1642,7 +1614,7 @@ header .header-logo a {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	min-height: 804px;
+	min-height: 657px;
 	position: relative;
 }
 
@@ -1666,7 +1638,7 @@ header .header-logo a {
 	width: 100%;
 	height: 100%;
 	opacity: .6;
-	background-color: #000000;
+	background: linear-gradient(to right, #121c94 0%, #004eff 20%, transparent 100%);
 }
 
 .home-content-table {
@@ -1691,15 +1663,16 @@ header .header-logo a {
 .home-content-tablecell h3 {
 	font-family: "montserrat-bold", sans-serif;
 	font-size: 2.2rem;
-	color: rgba(255, 255, 255, 0.35);
+	color: rgb(1 148 254);;
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 	margin: 0 0 0 .3rem;
 }
 
 .home-content-tablecell h1 {
-	font-family: "librebaskerville-bold", serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 5.2rem;
+	font-weight: 800;
 	line-height: 1.5;
 	color: #FFFFFF;
 }
@@ -1932,15 +1905,16 @@ header .header-logo a {
 #about h3 {
 	font-family: "montserrat-bold", sans-serif;
 	font-size: 1.6rem;
-	color: #4C2405;
+	color: #1f1f1f;
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 	margin: 0 0 0 .3rem;
 }
 
 #about h1 {
-	font-family: "librebaskerville-bold", serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 3.3rem;
+	font-weight: 800;
 	line-height: 1.455;
 }
 
@@ -2200,10 +2174,10 @@ header .header-logo a {
 	width: 100%;
 	height: 100%;
 	opacity: .2;
-	background: -moz-linear-gradient(left, black 0%, black 20%, transparent 100%);  /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, black 0%, black 20%, transparent 100%);  /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, black 0%, black 20%, transparent 100%);  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);  /* IE6-9 */
+	
+	
+	background: linear-gradient(to right, #121c94 0%, #004eff 20%, transparent 100%);  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f60', endColorstr='#f60', GradientType=1);  /* IE6-9 */
 }
 
 #skills .row {
@@ -2221,7 +2195,7 @@ header .header-logo a {
 
 #skills .section-intro h3 {
 	color: rgba(255, 255, 255, 0.35);
-	color: #7c3b08;
+	color: #0094fe;
 }
 
 #skills .section-intro h1 {
@@ -2233,7 +2207,7 @@ header .header-logo a {
 }
 
 #skills .skill-bars li {
-	background: #7c3b08;
+	background: #0052ff;
 	margin-bottom: 7.2rem;
 }
 
@@ -2294,7 +2268,7 @@ header .header-logo a {
 
 #credentials .credentials-content h2 {
 	margin-bottom: 4.8rem;
-	color: #4C2405;
+	color: #1f1f1f;
 	padding-left: 8rem;
 	font-size: 1.8rem;
 	text-transform: uppercase;
@@ -2348,7 +2322,7 @@ header .header-logo a {
 	height: 4.8rem;
 	width: 4.8rem;
 	line-height: 4.8rem;
-	background: #4C2405;
+	background: #0094fe;
 	border-radius: 50%;
 	text-align: center;
 	color: #FFFFFF;
@@ -2433,7 +2407,7 @@ header .header-logo a {
  *
  * ------------------------------------------------------------------- */
 #portfolio {
-	background: #EBEBEB;
+	background: #e0f2ff;
 	min-height: 800px;
 	position: relative;
 	padding: 12rem 0 15rem;
@@ -2782,7 +2756,7 @@ header .header-logo a {
 	width: 100%;
 	height: 100%;
 	opacity: .7;
-	background-color: #000000;
+	background: linear-gradient(to right, #121c94 0%, #004eff 20%, transparent 100%);
 }
 
 #contact .section-intro h1 {
@@ -2790,7 +2764,7 @@ header .header-logo a {
 }
 
 #contact .section-intro h3 {
-	color: #7c3b08;
+	color: #0194fe;
 }
 
 #contact .section-intro p.lead {
@@ -2913,13 +2887,14 @@ header .header-logo a {
 	padding: 0 3rem;
 	margin-top: 4.8rem;
 	width: 100%;
-	background: #7c3b08;
-	color: #FFFFFF;
+	background: #fff;
+	color: #000;
 }
 
 #contact button.submitform:hover,
 #contact button.submitform:focus {
-	background: #4C2405;
+	background: #000;
+	color:#fff;
 }
 
 #message-warning,
@@ -2980,7 +2955,9 @@ header .header-logo a {
 }
 
 .contact-info p {
-	color: #555;
+	color: #fff;
+	font-weight: 300;
+	font-family: "montserrat-regular", sans-serif;
 }
 
 .contact-info .collapse {
@@ -3084,7 +3061,7 @@ footer .footer-social {
 	list-style: none;
 	display: inline-block;
 	margin-left: 0;
-	margin-bottom: 9rem;
+	margin-bottom: 2rem;
 }
 
 footer .footer-social li {
@@ -3125,8 +3102,8 @@ footer .footer-social li:last-child {
 	width: 60px;
 	line-height: 63px;
 	text-align: center;
-	background-color: #000000;
-	color: #888;
+	background-color: #444e82;
+	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
 	-moz-transition: all 0.3s ease-in-out;
